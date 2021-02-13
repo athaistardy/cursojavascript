@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+header {
+    width: 500px;
+    padding: 20px 90px;
+}
+
+section {
+    width: 500px;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: ease all 0.5s;
+}
+
+a:hover {
+    background-color: tomato;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #333;
+    margin: 10px;
+}
