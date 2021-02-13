@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+
+        #container {
+            width: 600px;
+            height: 300px;
+            padding: 60px 40px;
+
+        }
+
+        #form-pais {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        input {
+            width: 200px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 25px;
+            outline: none;
+        }
+
+        #enviar-res {
+            width: 90px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #enviar-res:hover {
+            background-color: tomato;
+            color: #FFF;
+            cursor: pointer;
+        }
+
+        #resultado-form {
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="form-pais">
+            Informe seu País:
+            <input type="text" name="seuPais" id="seuPais">
+            <input type="button" id="enviar-res" value="Enviar" onclick="Clicar()">
+        </div>
+
+        <div id="resultado-form">
+            
+        </div>
+
+    </div>
+
+
+    <script>
+       function Clicar() {
+            var seuPais = document.getElementById('seuPais').value
+            var resForm = document.getElementById('resultado-form')
+
+            if (seuPais == 'Brasil') {
+                resForm.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else {
+                resForm.innerHTML += `<p>Você é Estrangeiro!</p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
